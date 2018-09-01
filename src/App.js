@@ -27,28 +27,13 @@ class App extends Component {
 
 
   handleSortByName = () => {
-    const alphabetizedNames = this.state.data.sort((a, b) => {
-      const nameA = a.name.toLowerCase();
-      const nameB = b.name.toLowerCase();
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
-      return 0;
-    });
-  
+  const alphabetizedNames = this.state.data.sort((a, b) => a.name > b.name);  
    this.setState({data: alphabetizedNames})
-  return;
   }
 
   handleSortByHeight = () => {
     const sortedHeight = this.state.data.sort((a,b) => a.height - b.height);
     this.setState({data: sortedHeight});
-    // do not modify state directly. Practice immutability
-    // make a new array of the newly sorted data
-    // set that data to state
   }
 
 

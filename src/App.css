@@ -3,14 +3,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: yellow;
+  background: url('./stars.jpeg');
 }
 
 
 .starWars-card {
-  border: 1px solid #999;
+  border: 1px solid white;
   padding: 10px;
   margin: 5px;
   width: 300px;
+  background-color: black;
 }
 
 .filters {
@@ -20,4 +23,5 @@
 .filters button {
   height: 50px;
   width: 75px;
+  margin: 10px;
 }
